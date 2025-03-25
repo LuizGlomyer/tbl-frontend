@@ -1,0 +1,26 @@
+:host {
+  display: block;
+}
+
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: grey;
+  background-image: url('/assets/waves.png');
+  background-size: 50% auto;
+  background-repeat: repeat;
+  color: white;
+  animation: pan 5s linear infinite;
+}
+
