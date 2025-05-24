@@ -4,7 +4,7 @@ import { GamesComponent } from './features/pages/games/games.component';
 import { NotFoundPageComponent } from './shared/pages/not-found-page/not-found-page.component';
 
 export const routes: Routes = [
-  { path: '', component: LandingComponent, pathMatch: 'full'},  
+  { path: '', component: LandingComponent, pathMatch: 'full', title: "Landing"},  
   { path: 'games', component: GamesComponent }, 
   { path: '**', component: NotFoundPageComponent },
 ];
