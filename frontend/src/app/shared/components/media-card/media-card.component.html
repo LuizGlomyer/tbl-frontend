@@ -1,0 +1,22 @@
+@if (media) {
+<mat-card class="custom-card">
+  <a [routerLink]="['/', media.type, media.id]">
+    <img class="card-image" [src]="media.imageCoverUrl" alt="Cover image" draggable="false"/>
+  </a>
+
+  <div class="card-content" matRipple>
+    <mat-card-header>
+      <mat-card-title>
+        <a [routerLink]="['/', media.type, media.id]">
+          {{ media.name }}
+        </a>
+      </mat-card-title>
+      <mat-card-subtitle>{{ media.acronym }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-subtitle class="media-type">
+      <a [routerLink]="['/', media.type]">{{ media.type | MediaType }}</a>
+    </mat-card-subtitle>
+  </div>
+</mat-card>
+}
