@@ -1,9 +1,17 @@
-<div class="flex flex-col min-h-screen ">
-  <app-header></app-header>
+<mat-drawer-container class="drawer-container" hasBackdrop>
+  <mat-drawer #drawer mode="over" position="end" class="settings-drawer">
+    <h2>Settings</h2>
+  </mat-drawer>
 
-  <main class="flex-1">
-    <ng-content></ng-content>
-  </main>
+  <mat-drawer-content>
+    <div class="flex flex-col min-h-screen">
+      <app-header (openSettings)="drawer.open()"></app-header>
 
-  <app-footer></app-footer>
-</div>
+      <main class="flex-1">
+        <ng-content></ng-content>
+      </main>
+
+      <app-footer></app-footer>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

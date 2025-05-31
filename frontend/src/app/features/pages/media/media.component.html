@@ -1,11 +1,17 @@
 <app-page-view>
-  <div class="media-group">
-    @for (item of media; track item.name) {
-    <app-media-card [media]="item" />
-    } @empty {
-    <h1>No media to show</h1>
-    } @if (errorMessage){
-    <h1>{{ errorMessage }}</h1>
-    }
-  </div>
+  <section>
+    <h1>Media</h1>
+    <p>Filters</p>
+    <span>Showing {{ media.length }} items</span>
+
+    <div class="media-group">
+      @for (item of media; track item.name) {
+      <app-media-card [media]="item" />
+      } @empty {
+      <h1>No media to show</h1>
+      } @if (errorMessage){
+      <h1>{{ errorMessage }}</h1>
+      }
+    </div>
+  </section>
 </app-page-view>

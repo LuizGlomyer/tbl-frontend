@@ -2,7 +2,42 @@
   display: block;
 }
 
-header {
-  background-color: red;
-  height: 100px;
+mat-icon {
+  color: white;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+img {
+  height: 80px;
+}
+
+.grid-header {
+  display: grid;
+  background-color: midnightblue;
+  height: 60px;
+  padding: 0.5rem 1rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+
+  color: white;
+
+  .logo img {
+    height: 40px;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+  }
 }

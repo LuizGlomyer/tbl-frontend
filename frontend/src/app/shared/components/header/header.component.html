@@ -1,3 +1,25 @@
-<header>
-  <span>Hello, TBL</span>
+<header class="grid-header">
+  <a [routerLink]="['/']" class="logo">
+    <img src="assets/placeholder.svg" alt="placeholder" />
+  </a>
+  <div class="title">[Search for anything]</div>
+  <div class="actions">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="palette"
+      />
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Vantas</button>
+      <button mat-menu-item>Celestia</button>
+      <button mat-menu-item>Sonozaki</button>
+      <button mat-menu-item>Daikuuji</button>
+    </mat-menu>
+
+    <button mat-icon-button (click)="onSettingsClick()" color="accent">
+      <mat-icon>settings</mat-icon>
+    </button>
+  </div>
 </header>
