@@ -1,3 +1,37 @@
 :host {
   display: block;
 }
+
+@keyframes pan {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  100% {
+    background-position: 500px 500px;
+  }
+}
+
+.hero {
+  background-image: url("/assets/tiles.svg");
+  background-size: 500px 500px;
+  background-repeat: repeat;
+  animation: pan 10s linear infinite;
+  background-color: green;
+
+  h1 {
+    font-family: "Alfa Slab One", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  span {
+    color: white;
+    mix-blend-mode: difference;
+  }
+
+  p {
+    font-family: "Roboto", sans-serif;
+    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 1);
+    font-weight: bold;
+  }
+}
